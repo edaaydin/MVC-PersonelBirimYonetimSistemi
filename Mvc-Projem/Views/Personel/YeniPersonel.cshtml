@@ -1,0 +1,45 @@
+﻿@model Personel
+@{
+    ViewData["Title"] = "YeniPersonel";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<div class="row">
+
+    <form method="post">
+        <div class="col-md-5W">
+
+            <div class="form-group">
+                <b> <label>Personel Adı</label></b>
+                <input asp-for="Ad" type="text" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <b> <label>Personel Soyadı</label></b>
+                <input asp-for="Soyad" type="text" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <b> <label>Şehir</label></b>
+                <input asp-for="Sehir" type="text" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <b> <label>Birim Adı</label></b>
+                <select asp-for=BirimId asp-items="@ViewBag.deger"  type="text" class="form-select" >
+                    <option disabled selected>-Birim Seçiniz-
+
+                    </option>
+                </select>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <button type="submit" class="btn btn-info">Personel Ekle</button>
+        </div>
+    </form>
+
+</div>
+
+

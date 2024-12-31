@@ -1,0 +1,37 @@
+﻿@model List<Personel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Şehir</th>
+        <th>Departman</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+        @* <th>Detaylar</th> *@
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.PersonelId</td>
+            <td>@item.Ad</td>
+            <td>@item.Soyad</td>
+            <td>@item.Sehir</td>
+            <td>@item.BirimId</td>
+            <td>
+                <a asp-action="PersonelGetir" asp-controller="Personel" asp-route-id="@item.PersonelId" class="btn btn-success">Güncelle</a>
+            </td>
+            <td>
+                <a asp-action="PersonelSil" asp-controller="Personel" asp-route-id="@item.PersonelId" class="btn btn-danger">Sil</a>
+            </td>
+        </tr>
+    }
+</table>
+<a class="btn btn-primary" asp-action="YeniPersonel" asp-controller="Personel">Yeni Personel Ekle</a>
+

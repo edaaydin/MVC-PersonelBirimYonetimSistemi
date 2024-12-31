@@ -1,0 +1,27 @@
+﻿@model Birim
+@{
+    ViewData["Title"] = "BirimGetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+<form asp-action="BirimGuncelle" asp-controller="Birim" method="post">
+    <div class="col-md-5W">
+
+        <div class="form-group">
+            <b> <label>Departman Id</label></b>
+            <input asp-for="Id" type="text" class="form-control" />
+        </div>
+        <br />
+        <div class="form-group">
+            <b> <label asp-for="BirimAd">Departman Adı</label></b>
+            <input asp-for="BirimAd" type="text" class="form-control" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <button type="submit" class="btn btn-warning">Birim Güncelle</button>
+    </div>
+</form>
+
+

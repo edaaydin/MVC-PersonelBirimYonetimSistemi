@@ -1,0 +1,37 @@
+﻿@model Personel
+@{
+    ViewData["Title"] = "PersonelGetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<form asp-action="PersonelGuncelle" asp-controller="Personel" method="post">
+    <div class="col-md-5W">
+
+        <div class="form-group">
+            <b> <label>Departman Id</label></b>
+            <input asp-for="PersonelId" type="text" class="form-control" />
+        </div>
+        <br />
+        <div class="form-group">
+            <b> <label asp-for="Ad">Personel Adı</label></b>
+            <input asp-for="Ad" type="text" class="form-control" />
+        </div>
+        <br />
+        <div class="form-group">
+            <b> <label asp-for="Soyad">Personel Soyadı</label></b>
+            <input asp-for="Soyad" type="text" class="form-control" />
+        </div>
+        <br />
+        <div class="form-group">
+            <b> <label asp-for="Ad">Sehir</label></b>
+            <input asp-for="Sehir" type="text" class="form-control" />
+        </div>
+
+    </div>
+    <br />
+    <div class="form-group">
+        <button type="submit" class="btn btn-warning">Personel Güncelle</button>
+    </div>
+</form>
+
+
