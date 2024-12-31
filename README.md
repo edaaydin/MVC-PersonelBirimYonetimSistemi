@@ -5,6 +5,7 @@
 💻 Kullanılan Teknolojiler:
 
 •ASP.NET Core MVC
+<br>
 •Entity Framework
 •MSSQL Server
 
