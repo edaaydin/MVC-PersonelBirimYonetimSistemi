@@ -35,6 +35,7 @@
 •Personel bilgilerini güncelleme 
 <br>
 •Personel silme 
+<br>
 
 ✅ Çıkış butonuna basıldığında kullanıcıyı Login sayfasına yönlendirme işlemini gerçekleştirdim.
 
